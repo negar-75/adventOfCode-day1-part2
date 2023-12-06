@@ -56,23 +56,23 @@ while (i < input.length) {
 }
 detectNumbers('eightwothree')
 
-// function readLines() {
-//     const file = readline.createInterface({ 
-//         input: fs.createReadStream('./input.txt'), 
-//         output: process.stdout, 
-//         terminal: false
-//     }); 
-//    let numbs = [];
-//     file.on('line', (line) => { 
-//         numbs.push(detectNumbers(line));
-//     }); 
-//     file.on('close', () => {
-//        console.log(numbs)
-//        const sum = numbs.reduce((acc, current) => acc + current, 0);
-//        console.log(sum);
-//     });
+function readLines() {
+    const file = readline.createInterface({ 
+        input: fs.createReadStream('./input.txt'), 
+        output: process.stdout, 
+        terminal: false
+    }); 
+   let numbs = [];
+    file.on('line', (line) => { 
+        numbs.push(detectNumbers(line));
+    }); 
+    file.on('close', () => {
+       console.log(numbs)
+       const sum = numbs.reduce((acc, current) => acc + current, 0);
+       console.log(sum);
+    });
     
-// }
+}
 
-// readLines()
+readLines()
 
